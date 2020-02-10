@@ -1,7 +1,11 @@
 module Features
   def sign_in
+    sign_in_as "person@exaple.com"
+  end
+
+  def sign_in_as(email)
     visit root_path
-    fill_in 'email', with: 'person@person.de'
+    fill_in 'email', with: email
     click_on 'Sign in'
   end
 end
